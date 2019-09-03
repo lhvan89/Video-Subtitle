@@ -15,6 +15,10 @@
 		04292649231D864E0037DF50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04292648231D864E0037DF50 /* Assets.xcassets */; };
 		0429264C231D864E0037DF50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0429264A231D864E0037DF50 /* LaunchScreen.storyboard */; };
 		04292657231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04292656231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 */; };
+		04BCEB56231EA8E7003202F6 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEB55231EA8E7003202F6 /* VideoManager.swift */; };
+		04BCEB58231EC8F2003202F6 /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEB57231EC8F2003202F6 /* SubtitleTableViewCell.swift */; };
+		04BCEB5B231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEB59231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift */; };
+		04BCEB5C231EE825003202F6 /* SubtitleHideTranslateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BCEB5A231EE825003202F6 /* SubtitleHideTranslateTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		0429264B231D864E0037DF50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0429264D231D864E0037DF50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04292656231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CNN-Student-News-2019-05-24.mp4"; sourceTree = "<group>"; };
+		04BCEB55231EA8E7003202F6 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		04BCEB57231EC8F2003202F6 /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
+		04BCEB59231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleHideTranslateTableViewCell.swift; sourceTree = "<group>"; };
+		04BCEB5A231EE825003202F6 /* SubtitleHideTranslateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleHideTranslateTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 		04292640231D864D0037DF50 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				04BCEB54231EA8D3003202F6 /* Manager */,
 				0418143E231DADF900ED720A /* extensions */,
 				04292653231D87610037DF50 /* resource */,
 				04292641231D864D0037DF50 /* AppDelegate.swift */,
@@ -77,6 +86,9 @@
 				0429264A231D864E0037DF50 /* LaunchScreen.storyboard */,
 				0429264D231D864E0037DF50 /* Info.plist */,
 				04181441231DB12900ED720A /* Subtitle.swift */,
+				04BCEB57231EC8F2003202F6 /* SubtitleTableViewCell.swift */,
+				04BCEB59231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift */,
+				04BCEB5A231EE825003202F6 /* SubtitleHideTranslateTableViewCell.xib */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -87,6 +99,14 @@
 				04292656231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		04BCEB54231EA8D3003202F6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				04BCEB55231EA8E7003202F6 /* VideoManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0429264C231D864E0037DF50 /* LaunchScreen.storyboard in Resources */,
+				04BCEB5C231EE825003202F6 /* SubtitleHideTranslateTableViewCell.xib in Resources */,
 				04292657231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 in Resources */,
 				04292649231D864E0037DF50 /* Assets.xcassets in Resources */,
 				04292647231D864D0037DF50 /* Main.storyboard in Resources */,
@@ -163,6 +184,9 @@
 			files = (
 				04292644231D864D0037DF50 /* ViewController.swift in Sources */,
 				04181442231DB12900ED720A /* Subtitle.swift in Sources */,
+				04BCEB56231EA8E7003202F6 /* VideoManager.swift in Sources */,
+				04BCEB5B231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift in Sources */,
+				04BCEB58231EC8F2003202F6 /* SubtitleTableViewCell.swift in Sources */,
 				04292642231D864D0037DF50 /* AppDelegate.swift in Sources */,
 				04181440231DAE1800ED720A /* AVPlayer+isPlaying.swift in Sources */,
 			);
