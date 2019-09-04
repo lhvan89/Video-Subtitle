@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var milisecondLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var playPauseButton: UIButton!
     
-    var isShowSubtitle: Bool = false
+    var isShowSubtitle: Bool = true
     
     @IBAction func didTabShowHideSubtitle(_ sender: UIButton) {
         isShowSubtitle = !isShowSubtitle
@@ -30,7 +31,12 @@ class ViewController: UIViewController {
         video.play()
         
         tableView.register(UINib(nibName: "SubtitleHideTranslateTableViewCell", bundle: nil), forCellReuseIdentifier: "SubtitleHideTranslateTableViewCell")
+        tableView.register(UINib(nibName: "InfoTableTableViewCell", bundle: nil), forCellReuseIdentifier: "InfoTableTableViewCell")
         tableView.estimatedRowHeight = 10
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     @IBAction func didTapForwardButton(_ sender: UIButton) {
@@ -48,24 +54,43 @@ class ViewController: UIViewController {
         } else {
             video.play()
         }
+        self.playPauseButton.setImage(UIImage(named: self.video.isPlaying ? "icon_pause" : "icon_play"), for: .normal)
     }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return subTitle.count
+        switch section {
+        case 0:
+            return 1
+        default:
+            return subTitle.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if isShowSubtitle {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleTableViewCell") as? SubtitleTableViewCell else { return UITableViewCell() }
-            cell.loadData(item: subTitle[indexPath.row])
+        switch indexPath.section {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InfoTableTableViewCell") as? InfoTableTableViewCell else { return UITableViewCell() }
+            cell.loadData(title: "CNN Student News - May 24, 2016")
+            cell.separatorInset = .zero
             return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleHideTranslateTableViewCell") as? SubtitleHideTranslateTableViewCell else { return UITableViewCell() }
-            cell.loadData(item: subTitle[indexPath.row])
-            return cell
+        default:
+            if isShowSubtitle {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleTableViewCell") as? SubtitleTableViewCell else { return UITableViewCell() }
+                cell.loadData(item: subTitle[indexPath.row])
+                return cell
+            } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleHideTranslateTableViewCell") as? SubtitleHideTranslateTableViewCell else { return UITableViewCell() }
+                cell.loadData(item: subTitle[indexPath.row])
+                return cell
+            }
         }
 
     }
