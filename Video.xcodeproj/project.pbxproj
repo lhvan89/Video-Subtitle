@@ -15,6 +15,8 @@
 		04292649231D864E0037DF50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04292648231D864E0037DF50 /* Assets.xcassets */; };
 		0429264C231D864E0037DF50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0429264A231D864E0037DF50 /* LaunchScreen.storyboard */; };
 		04292657231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04292656231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 */; };
+		0443B07023216010007E3055 /* SubtitleSetTimingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443B06E23216010007E3055 /* SubtitleSetTimingTableViewCell.swift */; };
+		0443B07123216010007E3055 /* SubtitleSetTimingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0443B06F23216010007E3055 /* SubtitleSetTimingTableViewCell.xib */; };
 		04BCEB56231EA8E7003202F6 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEB55231EA8E7003202F6 /* VideoManager.swift */; };
 		04BCEB58231EC8F2003202F6 /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEB57231EC8F2003202F6 /* SubtitleTableViewCell.swift */; };
 		04BCEB5B231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEB59231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift */; };
@@ -35,6 +37,8 @@
 		0429264B231D864E0037DF50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0429264D231D864E0037DF50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04292656231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CNN-Student-News-2019-05-24.mp4"; sourceTree = "<group>"; };
+		0443B06E23216010007E3055 /* SubtitleSetTimingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleSetTimingTableViewCell.swift; sourceTree = "<group>"; };
+		0443B06F23216010007E3055 /* SubtitleSetTimingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleSetTimingTableViewCell.xib; sourceTree = "<group>"; };
 		04BCEB55231EA8E7003202F6 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		04BCEB57231EC8F2003202F6 /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		04BCEB59231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleHideTranslateTableViewCell.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				04BCEB5A231EE825003202F6 /* SubtitleHideTranslateTableViewCell.xib */,
 				D40A8060231FC67000D21091 /* InfoTableTableViewCell.swift */,
 				D40A8061231FC67000D21091 /* InfoTableTableViewCell.xib */,
+				0443B06E23216010007E3055 /* SubtitleSetTimingTableViewCell.swift */,
+				0443B06F23216010007E3055 /* SubtitleSetTimingTableViewCell.xib */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -190,6 +196,7 @@
 				04292657231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 in Resources */,
 				04292649231D864E0037DF50 /* Assets.xcassets in Resources */,
 				D40A8063231FC67000D21091 /* InfoTableTableViewCell.xib in Resources */,
+				0443B07123216010007E3055 /* SubtitleSetTimingTableViewCell.xib in Resources */,
 				04292647231D864D0037DF50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +210,7 @@
 			files = (
 				04292644231D864D0037DF50 /* ViewController.swift in Sources */,
 				04181442231DB12900ED720A /* Subtitle.swift in Sources */,
+				0443B07023216010007E3055 /* SubtitleSetTimingTableViewCell.swift in Sources */,
 				04BCEB56231EA8E7003202F6 /* VideoManager.swift in Sources */,
 				04BCEB5B231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift in Sources */,
 				04BCEB58231EC8F2003202F6 /* SubtitleTableViewCell.swift in Sources */,
@@ -355,8 +363,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AWN5653TC6;
+				DEVELOPMENT_TEAM = EWV6ACNJ7K;
 				INFOPLIST_FILE = Video/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,8 +382,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AWN5653TC6;
+				DEVELOPMENT_TEAM = EWV6ACNJ7K;
 				INFOPLIST_FILE = Video/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

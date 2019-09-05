@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="KGk-i7-Jjw" customClass="SubtitleSetTimingTableViewCell" customModule="Video" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="558" height="131"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="558" height="130.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, everyone. I`m Carl Azuz. Thank you for taking ten minutes to get up to speed on international current events." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnY-kr-afD">
+                        <rect key="frame" x="16" y="16" width="372" height="59"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                        <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jl-cr-T8U">
+                        <rect key="frame" x="404" y="0.0" width="154" height="130.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gad-FJ-7Ip">
+                                <rect key="frame" x="16" y="50.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="2aJ-ev-HIe"/>
+                                    <constraint firstAttribute="width" secondItem="gad-FJ-7Ip" secondAttribute="height" multiplier="1:1" id="bPu-xD-ZXu"/>
+                                    <constraint firstAttribute="width" secondItem="gad-FJ-7Ip" secondAttribute="height" multiplier="1:1" id="rZb-MK-ZbJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="ztC-pB-u1U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="▶️"/>
+                                <connections>
+                                    <action selector="didTapSetStartTimeButotn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Wlg-UE-rJU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YU-Iv-zfo">
+                                <rect key="frame" x="108" y="50.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Ug2-r8-XE5"/>
+                                    <constraint firstAttribute="width" secondItem="0YU-Iv-zfo" secondAttribute="height" multiplier="1:1" id="o0s-t7-xrU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="⏸"/>
+                                <connections>
+                                    <action selector="didTapSetEndTimeButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kzz-bJ-265"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKI-LJ-WFg">
+                                <rect key="frame" x="62" y="50.5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iKI-LJ-WFg" secondAttribute="height" multiplier="1:1" id="8rP-Qm-LFT"/>
+                                    <constraint firstAttribute="width" constant="30" id="J5r-5y-45o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="🔄"/>
+                                <connections>
+                                    <action selector="didTapReplayButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="phQ-LI-X0o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plH-iL-KVH">
+                                <rect key="frame" x="14.5" y="35.5" width="33" height="15"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysi-vc-6gd">
+                                <rect key="frame" x="106.5" y="35.5" width="33" height="15"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gad-FJ-7Ip" firstAttribute="centerY" secondItem="8jl-cr-T8U" secondAttribute="centerY" id="14I-bS-WzT"/>
+                            <constraint firstItem="plH-iL-KVH" firstAttribute="centerX" secondItem="gad-FJ-7Ip" secondAttribute="centerX" id="54r-CC-vh0"/>
+                            <constraint firstItem="gad-FJ-7Ip" firstAttribute="top" secondItem="plH-iL-KVH" secondAttribute="bottom" id="C6a-0G-1Xq"/>
+                            <constraint firstItem="ysi-vc-6gd" firstAttribute="centerX" secondItem="0YU-Iv-zfo" secondAttribute="centerX" id="GgQ-tJ-fKB"/>
+                            <constraint firstItem="0YU-Iv-zfo" firstAttribute="centerY" secondItem="8jl-cr-T8U" secondAttribute="centerY" id="Ktk-Fm-Af6"/>
+                            <constraint firstItem="gad-FJ-7Ip" firstAttribute="leading" secondItem="8jl-cr-T8U" secondAttribute="leading" constant="16" id="WlY-96-3fs"/>
+                            <constraint firstItem="iKI-LJ-WFg" firstAttribute="centerY" secondItem="8jl-cr-T8U" secondAttribute="centerY" id="bNm-Qj-4r0"/>
+                            <constraint firstItem="0YU-Iv-zfo" firstAttribute="leading" secondItem="iKI-LJ-WFg" secondAttribute="trailing" constant="16" id="cAJ-KB-xiw"/>
+                            <constraint firstItem="0YU-Iv-zfo" firstAttribute="top" secondItem="ysi-vc-6gd" secondAttribute="bottom" id="rnR-Ve-Dw3"/>
+                            <constraint firstAttribute="trailing" secondItem="0YU-Iv-zfo" secondAttribute="trailing" constant="16" id="vqs-Yi-NoT"/>
+                            <constraint firstItem="iKI-LJ-WFg" firstAttribute="leading" secondItem="gad-FJ-7Ip" secondAttribute="trailing" constant="16" id="vuK-Hb-0gc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="8jl-cr-T8U" secondAttribute="trailing" id="BjY-iL-niw"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UnY-kr-afD" secondAttribute="bottom" constant="16" id="DBB-pO-4vQ"/>
+                    <constraint firstItem="UnY-kr-afD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ObK-1p-aXD"/>
+                    <constraint firstItem="UnY-kr-afD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="QNQ-jh-s9w"/>
+                    <constraint firstItem="8jl-cr-T8U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UEU-XM-Po3"/>
+                    <constraint firstItem="8jl-cr-T8U" firstAttribute="leading" secondItem="UnY-kr-afD" secondAttribute="trailing" constant="16" id="gjs-ZU-foe"/>
+                    <constraint firstAttribute="bottom" secondItem="8jl-cr-T8U" secondAttribute="bottom" id="yHJ-Eu-f6b"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="beginLabel" destination="plH-iL-KVH" id="aPD-gK-zaj"/>
+                <outlet property="endLabel" destination="ysi-vc-6gd" id="Jom-x6-hWl"/>
+                <outlet property="reloadButton" destination="iKI-LJ-WFg" id="Yei-Ee-aAb"/>
+                <outlet property="setEndTimeButton" destination="0YU-Iv-zfo" id="RAi-JZ-bec"/>
+                <outlet property="setStartTimeButton" destination="gad-FJ-7Ip" id="HG3-8x-fJi"/>
+                <outlet property="titleLabel" destination="UnY-kr-afD" id="cOH-2d-yfF"/>
+            </connections>
+            <point key="canvasLocation" x="200.00000000000003" y="110.82589285714285"/>
+        </tableViewCell>
+    </objects>
+</document>

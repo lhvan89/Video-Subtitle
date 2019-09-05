@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum TypeOfDisplaySubtitle {
+    case engSub
+    case translate
+    case setTiming
+}
 class ViewController: UIViewController {
     
     @IBOutlet weak var videoView: UIView!
@@ -17,11 +22,28 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var showHideControllButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var toolBarView: UIView!
     
-    var isShowSubtitle: Bool = true
     
-    @IBAction func didTabShowHideSubtitle(_ sender: UIButton) {
-        isShowSubtitle = !isShowSubtitle
+    var typeOfDisplay: TypeOfDisplaySubtitle = .engSub
+    
+    @IBAction func didTabShowTranslateSubtitle(_ sender: UIButton) {
+        typeOfDisplay = .translate
+        tableView.allowsSelection = true
+        tableView.reloadData()
+    }
+    
+    @IBAction func didTabShowEngSub(_ sender: UIButton) {
+        typeOfDisplay = .engSub
+        tableView.allowsSelection = true
+        tableView.reloadData()
+    }
+    
+    @IBAction func didTabSetTimingSubtitleButton(_ sender: UIButton) {
+        typeOfDisplay = .setTiming
+        tableView.allowsSelection = false
         tableView.reloadData()
     }
     
@@ -32,6 +54,7 @@ class ViewController: UIViewController {
         
         tableView.register(UINib(nibName: "SubtitleHideTranslateTableViewCell", bundle: nil), forCellReuseIdentifier: "SubtitleHideTranslateTableViewCell")
         tableView.register(UINib(nibName: "InfoTableTableViewCell", bundle: nil), forCellReuseIdentifier: "InfoTableTableViewCell")
+        tableView.register(UINib(nibName: "SubtitleSetTimingTableViewCell", bundle: nil), forCellReuseIdentifier: "SubtitleSetTimingTableViewCell")
         tableView.estimatedRowHeight = 10
     }
     
@@ -45,6 +68,12 @@ class ViewController: UIViewController {
     
     @IBAction func didTapRewindButton(_ sender: UIButton) {
         video.rewind(by: 0.3)
+    }
+    @IBAction func didTabShowHideControlButton(_ sender: UIButton) {
+        showHideControllButton.isSelected = !showHideControllButton.isSelected
+        titleLabel.isHidden = !showHideControllButton.isSelected
+        playPauseButton.isHidden = !showHideControllButton.isSelected
+        toolBarView.isHidden = !showHideControllButton.isSelected
     }
     
     @IBAction func didTapPlayPauseButton(_ sender: UIButton) {
@@ -82,13 +111,33 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.separatorInset = .zero
             return cell
         default:
-            if isShowSubtitle {
+            switch typeOfDisplay {
+            case .translate:
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleTableViewCell") as? SubtitleTableViewCell else { return UITableViewCell() }
                 cell.loadData(item: subTitle[indexPath.row])
                 return cell
-            } else {
+            case .engSub:
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleHideTranslateTableViewCell") as? SubtitleHideTranslateTableViewCell else { return UITableViewCell() }
                 cell.loadData(item: subTitle[indexPath.row])
+                return cell
+            case .setTiming:
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleSetTimingTableViewCell") as? SubtitleSetTimingTableViewCell else { return UITableViewCell() }
+                cell.setStartTimeAction = { [unowned self] in
+                    subTitle[indexPath.row].begin = self.video.currentTime
+                    tableView.reloadRows(at: [indexPath], with: .automatic)
+                }
+                
+                
+                cell.setEndTimeAction = { [unowned self] in
+                    subTitle[indexPath.row].end = self.video.currentTime
+                    tableView.reloadRows(at: [indexPath], with: .automatic)
+                }
+                
+                cell.reloadAction = { [unowned self] in
+                    self.video.play(sub: subTitle[indexPath.row])
+                }
+                cell.loadData(item: subTitle[indexPath.row])
+
                 return cell
             }
         }

@@ -19,9 +19,11 @@ class VideoManager {
     
     init(_ name: String, _ frame: UIView) {
         guard let path = Bundle.main.path(forResource: name, ofType: "mp4") else { return }
+        let screenWidth = UIScreen.main.bounds.size.width
         player = AVPlayer(url: URL(fileURLWithPath: path))
         playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = frame.bounds
+        playerLayer.frame.size.width = screenWidth//50//frame.bounds.width
+        playerLayer.frame.size.height = screenWidth * (360/640) //frame.bounds.height
         frame.layer.addSublayer(playerLayer)
     }
     
@@ -43,7 +45,7 @@ class VideoManager {
     
     var duration: Float64 {
         if let duration = player.currentItem?.duration {
-            return CMTimeGetSeconds(duration)
+            return  CMTimeGetSeconds(duration)
         }
         return 0
     }
@@ -55,11 +57,12 @@ class VideoManager {
     func play(sub: Subtitle) {
         if isLockTap { return }
         isLockTap = true
-        player.seek(to: CMTime(seconds: sub.start, preferredTimescale: 1000), toleranceBefore: .zero, toleranceAfter: .zero)
+        player.seek(to: CMTime(seconds: sub.begin, preferredTimescale: 1000), toleranceBefore: .zero, toleranceAfter: .zero)
         player.play()
-        let duration = sub.stop - sub.start
+        let duration = sub.end - sub.begin
+        print("duration", duration)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration - 0.220) {
             self.player.pause()
             self.isLockTap = false
         }
