@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapForwardButton(_ sender: UIButton) {
-        video.forward(by: 3)
+        video.forward(by: 0.1)
     }
     
     @IBAction func didTapRewindButton(_ sender: UIButton) {

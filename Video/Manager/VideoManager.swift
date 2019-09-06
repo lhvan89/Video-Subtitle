@@ -16,6 +16,7 @@ class VideoManager {
     var playerLayer = AVPlayerLayer()
     
     var isLockTap = false
+    var timer: Timer?
     
     init(_ name: String, _ frame: UIView) {
         guard let path = Bundle.main.path(forResource: name, ofType: "mp4") else { return }
@@ -55,17 +56,16 @@ class VideoManager {
     }
     
     func play(sub: Subtitle) {
-        if isLockTap { return }
-        isLockTap = true
         player.seek(to: CMTime(seconds: sub.begin, preferredTimescale: 1000), toleranceBefore: .zero, toleranceAfter: .zero)
         player.play()
         let duration = sub.end - sub.begin
         print("duration", duration)
+        timer?.invalidate()
+        timer = nil
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + duration - 0.220) {
+        timer = Timer.scheduledTimer(withTimeInterval: duration, repeats: false, block: { (timer) in
             self.player.pause()
-            self.isLockTap = false
-        }
+        })
     }
     
     func forward(by seconds: Float64) {
