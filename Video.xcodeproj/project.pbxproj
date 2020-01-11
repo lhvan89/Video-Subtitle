@@ -118,7 +118,6 @@
 		048AD608232431C200D3BAEB /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				048AD60A2324370D00D3BAEB /* WhatIsDebate.mp4 */,
 				04292656231D88EE0037DF50 /* cnn_student_news_2016_05_24.mp4 */,
 			);
 			path = Videos;
@@ -135,10 +134,19 @@
 		04B4D6A423CA3E7E00143675 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				04B4D6A523CA400000143675 /* Videos */,
 				04719A8A2322A78E00E19E08 /* cnn_student_news_2016_05_24.swift */,
 				048AD60C2324372600D3BAEB /* WhatIsDebate.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		04B4D6A523CA400000143675 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				048AD60A2324370D00D3BAEB /* WhatIsDebate.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		04BCEB54231EA8D3003202F6 /* VideoManager */ = {
