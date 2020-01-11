@@ -23,7 +23,7 @@ class SubtitleHideTranslateTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func loadData(item: Subtitle) {
+    func loadData(item: Sub) {
         titleLabel.text = item.engSub
     }
     

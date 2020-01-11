@@ -8,27 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		04181440231DAE1800ED720A /* AVPlayer+isPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0418143F231DAE1800ED720A /* AVPlayer+isPlaying.swift */; };
-		04181442231DB12900ED720A /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04181441231DB12900ED720A /* Subtitle.swift */; };
 		04292642231D864D0037DF50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04292641231D864D0037DF50 /* AppDelegate.swift */; };
 		04292644231D864D0037DF50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04292643231D864D0037DF50 /* ViewController.swift */; };
 		04292647231D864D0037DF50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04292645231D864D0037DF50 /* Main.storyboard */; };
 		04292649231D864E0037DF50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04292648231D864E0037DF50 /* Assets.xcassets */; };
 		0429264C231D864E0037DF50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0429264A231D864E0037DF50 /* LaunchScreen.storyboard */; };
-		04292657231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04292656231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 */; };
+		04292657231D88EE0037DF50 /* cnn_student_news_2016_05_24.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 04292656231D88EE0037DF50 /* cnn_student_news_2016_05_24.mp4 */; };
 		0443B07023216010007E3055 /* SubtitleSetTimingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0443B06E23216010007E3055 /* SubtitleSetTimingTableViewCell.swift */; };
 		0443B07123216010007E3055 /* SubtitleSetTimingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0443B06F23216010007E3055 /* SubtitleSetTimingTableViewCell.xib */; };
+		04719A8B2322A78E00E19E08 /* cnn_student_news_2016_05_24.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04719A8A2322A78E00E19E08 /* cnn_student_news_2016_05_24.swift */; };
+		048AD60B2324370D00D3BAEB /* WhatIsDebate.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 048AD60A2324370D00D3BAEB /* WhatIsDebate.mp4 */; };
+		048AD60D2324372600D3BAEB /* WhatIsDebate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048AD60C2324372600D3BAEB /* WhatIsDebate.swift */; };
+		04B4D6A323CA23DC00143675 /* Sub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4D6A223CA23DC00143675 /* Sub.swift */; };
 		04BCEB56231EA8E7003202F6 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEB55231EA8E7003202F6 /* VideoManager.swift */; };
 		04BCEB58231EC8F2003202F6 /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEB57231EC8F2003202F6 /* SubtitleTableViewCell.swift */; };
 		04BCEB5B231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEB59231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift */; };
 		04BCEB5C231EE825003202F6 /* SubtitleHideTranslateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BCEB5A231EE825003202F6 /* SubtitleHideTranslateTableViewCell.xib */; };
 		D40A8062231FC67000D21091 /* InfoTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40A8060231FC67000D21091 /* InfoTableTableViewCell.swift */; };
 		D40A8063231FC67000D21091 /* InfoTableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D40A8061231FC67000D21091 /* InfoTableTableViewCell.xib */; };
-		D45E96C4231F797100410C72 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = D45E96C3231F797100410C72 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0418143F231DAE1800ED720A /* AVPlayer+isPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+isPlaying.swift"; sourceTree = "<group>"; };
-		04181441231DB12900ED720A /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		0429263E231D864D0037DF50 /* Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Video.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04292641231D864D0037DF50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04292643231D864D0037DF50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,16 +37,19 @@
 		04292648231D864E0037DF50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0429264B231D864E0037DF50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0429264D231D864E0037DF50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04292656231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CNN-Student-News-2019-05-24.mp4"; sourceTree = "<group>"; };
+		04292656231D88EE0037DF50 /* cnn_student_news_2016_05_24.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cnn_student_news_2016_05_24.mp4; sourceTree = "<group>"; };
 		0443B06E23216010007E3055 /* SubtitleSetTimingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleSetTimingTableViewCell.swift; sourceTree = "<group>"; };
 		0443B06F23216010007E3055 /* SubtitleSetTimingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleSetTimingTableViewCell.xib; sourceTree = "<group>"; };
+		04719A8A2322A78E00E19E08 /* cnn_student_news_2016_05_24.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cnn_student_news_2016_05_24.swift; sourceTree = "<group>"; };
+		048AD60A2324370D00D3BAEB /* WhatIsDebate.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WhatIsDebate.mp4; sourceTree = "<group>"; };
+		048AD60C2324372600D3BAEB /* WhatIsDebate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatIsDebate.swift; sourceTree = "<group>"; };
+		04B4D6A223CA23DC00143675 /* Sub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sub.swift; sourceTree = "<group>"; };
 		04BCEB55231EA8E7003202F6 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		04BCEB57231EC8F2003202F6 /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		04BCEB59231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleHideTranslateTableViewCell.swift; sourceTree = "<group>"; };
 		04BCEB5A231EE825003202F6 /* SubtitleHideTranslateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleHideTranslateTableViewCell.xib; sourceTree = "<group>"; };
 		D40A8060231FC67000D21091 /* InfoTableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableTableViewCell.swift; sourceTree = "<group>"; };
 		D40A8061231FC67000D21091 /* InfoTableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableTableViewCell.xib; sourceTree = "<group>"; };
-		D45E96C3231F797100410C72 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +90,9 @@
 		04292640231D864D0037DF50 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				04B4D6A123CA23BF00143675 /* Model */,
 				D40A805F231FC60B00D21091 /* CustomCell */,
-				04BCEB54231EA8D3003202F6 /* Manager */,
+				04BCEB54231EA8D3003202F6 /* VideoManager */,
 				0418143E231DADF900ED720A /* extensions */,
 				04292653231D87610037DF50 /* resource */,
 				04292641231D864D0037DF50 /* AppDelegate.swift */,
@@ -96,9 +101,7 @@
 				04292648231D864E0037DF50 /* Assets.xcassets */,
 				0429264A231D864E0037DF50 /* LaunchScreen.storyboard */,
 				0429264D231D864E0037DF50 /* Info.plist */,
-				04181441231DB12900ED720A /* Subtitle.swift */,
 				04BCEB57231EC8F2003202F6 /* SubtitleTableViewCell.swift */,
-				D45E96C3231F797100410C72 /* data.json */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -106,17 +109,44 @@
 		04292653231D87610037DF50 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				04292656231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 */,
+				048AD609232431C900D3BAEB /* transcripts */,
+				048AD608232431C200D3BAEB /* Videos */,
 			);
 			path = resource;
 			sourceTree = "<group>";
 		};
-		04BCEB54231EA8D3003202F6 /* Manager */ = {
+		048AD608232431C200D3BAEB /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				048AD60A2324370D00D3BAEB /* WhatIsDebate.mp4 */,
+				04292656231D88EE0037DF50 /* cnn_student_news_2016_05_24.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		048AD609232431C900D3BAEB /* transcripts */ = {
+			isa = PBXGroup;
+			children = (
+				04719A8A2322A78E00E19E08 /* cnn_student_news_2016_05_24.swift */,
+				048AD60C2324372600D3BAEB /* WhatIsDebate.swift */,
+			);
+			path = transcripts;
+			sourceTree = "<group>";
+		};
+		04B4D6A123CA23BF00143675 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04B4D6A223CA23DC00143675 /* Sub.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04BCEB54231EA8D3003202F6 /* VideoManager */ = {
 			isa = PBXGroup;
 			children = (
 				04BCEB55231EA8E7003202F6 /* VideoManager.swift */,
 			);
-			path = Manager;
+			path = VideoManager;
 			sourceTree = "<group>";
 		};
 		D40A805F231FC60B00D21091 /* CustomCell */ = {
@@ -191,12 +221,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0429264C231D864E0037DF50 /* LaunchScreen.storyboard in Resources */,
-				D45E96C4231F797100410C72 /* data.json in Resources */,
 				04BCEB5C231EE825003202F6 /* SubtitleHideTranslateTableViewCell.xib in Resources */,
-				04292657231D88EE0037DF50 /* CNN-Student-News-2019-05-24.mp4 in Resources */,
+				04292657231D88EE0037DF50 /* cnn_student_news_2016_05_24.mp4 in Resources */,
 				04292649231D864E0037DF50 /* Assets.xcassets in Resources */,
 				D40A8063231FC67000D21091 /* InfoTableTableViewCell.xib in Resources */,
 				0443B07123216010007E3055 /* SubtitleSetTimingTableViewCell.xib in Resources */,
+				048AD60B2324370D00D3BAEB /* WhatIsDebate.mp4 in Resources */,
 				04292647231D864D0037DF50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,12 +239,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				04292644231D864D0037DF50 /* ViewController.swift in Sources */,
-				04181442231DB12900ED720A /* Subtitle.swift in Sources */,
+				04B4D6A323CA23DC00143675 /* Sub.swift in Sources */,
 				0443B07023216010007E3055 /* SubtitleSetTimingTableViewCell.swift in Sources */,
+				04719A8B2322A78E00E19E08 /* cnn_student_news_2016_05_24.swift in Sources */,
 				04BCEB56231EA8E7003202F6 /* VideoManager.swift in Sources */,
 				04BCEB5B231EE825003202F6 /* SubtitleHideTranslateTableViewCell.swift in Sources */,
 				04BCEB58231EC8F2003202F6 /* SubtitleTableViewCell.swift in Sources */,
 				04292642231D864D0037DF50 /* AppDelegate.swift in Sources */,
+				048AD60D2324372600D3BAEB /* WhatIsDebate.swift in Sources */,
 				D40A8062231FC67000D21091 /* InfoTableTableViewCell.swift in Sources */,
 				04181440231DAE1800ED720A /* AVPlayer+isPlaying.swift in Sources */,
 			);
@@ -363,7 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AWN5653TC6;
+				DEVELOPMENT_TEAM = EWV6ACNJ7K;
 				INFOPLIST_FILE = Video/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -382,7 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AWN5653TC6;
+				DEVELOPMENT_TEAM = EWV6ACNJ7K;
 				INFOPLIST_FILE = Video/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (

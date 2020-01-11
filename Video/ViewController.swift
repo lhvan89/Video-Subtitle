@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var toolBarView: UIView!
     
-    
     var typeOfDisplay: TypeOfDisplaySubtitle = .engSub
-    
+
+    var lesstion = Lesstion()
     @IBAction func didTabShowTranslateSubtitle(_ sender: UIButton) {
         typeOfDisplay = .translate
         tableView.allowsSelection = true
@@ -49,13 +49,34 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        video = VideoManager("CNN-Student-News-2019-05-24", videoView)
+
+        lesstion = WhatIsDebate
+        
+        video = VideoManager(lesstion.file, videoView)
+        video.player.addObserver(self, forKeyPath: "rate", options: .new, context: nil)
         video.play()
         
         tableView.register(UINib(nibName: "SubtitleHideTranslateTableViewCell", bundle: nil), forCellReuseIdentifier: "SubtitleHideTranslateTableViewCell")
         tableView.register(UINib(nibName: "InfoTableTableViewCell", bundle: nil), forCellReuseIdentifier: "InfoTableTableViewCell")
         tableView.register(UINib(nibName: "SubtitleSetTimingTableViewCell", bundle: nil), forCellReuseIdentifier: "SubtitleSetTimingTableViewCell")
         tableView.estimatedRowHeight = 10
+        
+        
+//        for i in lesstion.items {
+//            guard let begin = i[0] as? Double, let end = i[1] as? Double, let engSub = i[2] as? String, let vietSub = i[3] as? String else { continue }
+//            let item = Subtitle(begin: begin, end: end, engSub: engSub, vietSub: vietSub)
+//            self.SubTitles.append(item)
+//        }
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "rate" {
+            self.playPauseButton.setImage(UIImage(named: video.player.rate > 0 ? "icon_pause" : "icon_play"), for: .normal)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -83,8 +104,17 @@ class ViewController: UIViewController {
         } else {
             video.play()
         }
-        self.playPauseButton.setImage(UIImage(named: self.video.isPlaying ? "icon_pause" : "icon_play"), for: .normal)
     }
+    
+    @IBAction func didTapExportSubtitle(_ sender: UIButton) {
+        for i in lesstion.items {
+            let startTime = (i.startTime * 1000).rounded()/1000
+            let endTime = (i.endTime * 1000).rounded()/1000
+
+            print("Sub(\(startTime), \(endTime)), \"\(i.engSub)\", \"\(i.vietSub)\"")
+        }
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -98,7 +128,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case 0:
             return 1
         default:
-            return subTitle.count
+            return lesstion.items.count
         }
     }
     
@@ -114,29 +144,29 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             switch typeOfDisplay {
             case .translate:
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleTableViewCell") as? SubtitleTableViewCell else { return UITableViewCell() }
-                cell.loadData(item: subTitle[indexPath.row])
+                cell.loadData(item: lesstion.items[indexPath.row])
                 return cell
             case .engSub:
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleHideTranslateTableViewCell") as? SubtitleHideTranslateTableViewCell else { return UITableViewCell() }
-                cell.loadData(item: subTitle[indexPath.row])
+                cell.loadData(item: lesstion.items[indexPath.row])
                 return cell
             case .setTiming:
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "SubtitleSetTimingTableViewCell") as? SubtitleSetTimingTableViewCell else { return UITableViewCell() }
                 cell.setStartTimeAction = { [unowned self] in
-                    subTitle[indexPath.row].begin = self.video.currentTime
+                    self.lesstion.items[indexPath.row].startTime = self.video.currentTime
                     tableView.reloadRows(at: [indexPath], with: .automatic)
                 }
                 
                 
                 cell.setEndTimeAction = { [unowned self] in
-                    subTitle[indexPath.row].end = self.video.currentTime
+                    self.lesstion.items[indexPath.row].endTime = self.video.currentTime
                     tableView.reloadRows(at: [indexPath], with: .automatic)
                 }
                 
                 cell.reloadAction = { [unowned self] in
-                    self.video.play(sub: subTitle[indexPath.row])
+                    self.video.play(sub: self.lesstion.items[indexPath.row])
                 }
-                cell.loadData(item: subTitle[indexPath.row])
+                cell.loadData(item: lesstion.items[indexPath.row])
 
                 return cell
             }
@@ -145,6 +175,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        video.play(sub: subTitle[indexPath.row])
+        video.play(sub: lesstion.items[indexPath.row])
     }
 }

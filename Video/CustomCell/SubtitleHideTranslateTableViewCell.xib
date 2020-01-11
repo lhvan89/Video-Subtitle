@@ -30,7 +30,7 @@
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dQt-s2-pYa" secondAttribute="bottom" constant="8" id="EJQ-fi-Qds"/>
                     <constraint firstItem="dQt-s2-pYa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="KkK-CU-HPD"/>
                     <constraint firstItem="dQt-s2-pYa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="SCJ-4f-5zq"/>
-                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dQt-s2-pYa" secondAttribute="trailing" constant="15" id="ob3-VM-IJK"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dQt-s2-pYa" secondAttribute="trailing" constant="16" id="ob3-VM-IJK"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

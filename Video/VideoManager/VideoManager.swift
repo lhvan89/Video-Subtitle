@@ -28,7 +28,9 @@ class VideoManager {
         frame.layer.addSublayer(playerLayer)
     }
     
+    
     func play() {
+        player.currentItem?.forwardPlaybackEndTime = CMTime(seconds: duration, preferredTimescale: 1000)
         player.play()
     }
     
@@ -55,17 +57,11 @@ class VideoManager {
         player.seek(to: CMTime(seconds: second, preferredTimescale: 1000), toleranceBefore: .zero, toleranceAfter: .zero)
     }
     
-    func play(sub: Subtitle) {
-        player.seek(to: CMTime(seconds: sub.begin, preferredTimescale: 1000), toleranceBefore: .zero, toleranceAfter: .zero)
+    func play(sub: Sub) {
+        player.seek(to: CMTime(seconds: sub.startTime, preferredTimescale: 1000), toleranceBefore: .zero, toleranceAfter: .zero)
+
+        player.currentItem?.forwardPlaybackEndTime = CMTime(seconds: sub.endTime, preferredTimescale: 1000)
         player.play()
-        let duration = sub.end - sub.begin
-        print("duration", duration)
-        timer?.invalidate()
-        timer = nil
-        
-        timer = Timer.scheduledTimer(withTimeInterval: duration, repeats: false, block: { (timer) in
-            self.player.pause()
-        })
     }
     
     func forward(by seconds: Float64) {

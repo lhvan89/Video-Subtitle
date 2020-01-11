@@ -33,10 +33,10 @@ class SubtitleSetTimingTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func loadData(item: Subtitle) {
+    func loadData(item: Sub) {
         titleLabel.text = item.engSub
-        beginLabel.text = String(format: "%.3f", item.begin)
-        endLabel.text = String(format: "%.3f", item.end)
+        beginLabel.text = String(format: "%.3f", item.startTime)
+        endLabel.text = String(format: "%.3f", item.endTime)
     }
     
     @IBAction func didTapSetStartTimeButotn(_ sender: UIButton) {

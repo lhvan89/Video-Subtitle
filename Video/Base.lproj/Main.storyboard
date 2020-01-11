@@ -100,9 +100,18 @@
                                                     <action selector="didTabShowEngSub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GxS-Mi-hPf"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-pf-Hh8">
+                                                <rect key="frame" x="207" y="0.0" width="34" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="🚀"/>
+                                                <connections>
+                                                    <action selector="didTapExportSubtitle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ge5-uF-w9B"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="SZw-pf-Hh8" firstAttribute="top" secondItem="eNn-M8-eVP" secondAttribute="top" id="076-Bw-bAh"/>
                                             <constraint firstAttribute="height" constant="30" id="5N3-lY-WZO"/>
                                             <constraint firstItem="xzD-NX-VBw" firstAttribute="leading" secondItem="rr3-NW-MiH" secondAttribute="trailing" constant="8" id="7lT-lt-BeS"/>
                                             <constraint firstAttribute="bottom" secondItem="xzD-NX-VBw" secondAttribute="bottom" id="8Yq-3G-cTh"/>
@@ -119,8 +128,10 @@
                                             <constraint firstItem="nBo-EW-1vX" firstAttribute="leading" secondItem="3Bg-uE-YCr" secondAttribute="trailing" constant="8" id="dWF-sh-nFb"/>
                                             <constraint firstAttribute="trailing" secondItem="nBo-EW-1vX" secondAttribute="trailing" constant="8" id="dZK-sm-GPg"/>
                                             <constraint firstItem="xzD-NX-VBw" firstAttribute="top" secondItem="eNn-M8-eVP" secondAttribute="top" id="ed0-5S-FPZ"/>
+                                            <constraint firstItem="5ic-3Q-1cA" firstAttribute="leading" secondItem="SZw-pf-Hh8" secondAttribute="trailing" constant="8" id="hHX-RA-Vng"/>
                                             <constraint firstItem="5ic-3Q-1cA" firstAttribute="top" secondItem="eNn-M8-eVP" secondAttribute="top" id="jpf-9J-gnx"/>
                                             <constraint firstItem="3Bg-uE-YCr" firstAttribute="leading" secondItem="5ic-3Q-1cA" secondAttribute="trailing" constant="8" id="mLA-qH-aKn"/>
+                                            <constraint firstAttribute="bottom" secondItem="SZw-pf-Hh8" secondAttribute="bottom" id="ogj-oe-RND"/>
                                             <constraint firstItem="rr3-NW-MiH" firstAttribute="leading" secondItem="eNn-M8-eVP" secondAttribute="leading" constant="8" id="xHa-Oi-Sm9"/>
                                         </constraints>
                                     </view>
@@ -172,7 +183,7 @@
                                                     <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, everyone. I`m Carl Azuz. Thank you for taking ten minutes to get up to speed on international current events." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-wF-jY4">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, everyone. I`m Carl Azuz. Thank you for taking ten minutes to get up to speed on international current events. 🔈" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aa-wF-jY4">
                                                     <rect key="frame" x="15" y="8" width="344" height="59"/>
                                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                                     <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
