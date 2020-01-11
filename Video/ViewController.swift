@@ -111,7 +111,7 @@ class ViewController: UIViewController {
             let startTime = (i.startTime * 1000).rounded()/1000
             let endTime = (i.endTime * 1000).rounded()/1000
 
-            print("Sub(\(startTime), \(endTime)), \"\(i.engSub)\", \"\(i.vietSub)\"")
+            print("Sub(\(startTime), \(endTime), \"\(i.engSub)\", \"\(i.vietSub)\"),")
         }
     }
     
