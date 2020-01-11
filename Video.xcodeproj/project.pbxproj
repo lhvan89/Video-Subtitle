@@ -90,6 +90,7 @@
 		04292640231D864D0037DF50 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				04B4D6A423CA3E7E00143675 /* Data */,
 				04B4D6A123CA23BF00143675 /* Model */,
 				D40A805F231FC60B00D21091 /* CustomCell */,
 				04BCEB54231EA8D3003202F6 /* VideoManager */,
@@ -109,7 +110,6 @@
 		04292653231D87610037DF50 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				048AD609232431C900D3BAEB /* transcripts */,
 				048AD608232431C200D3BAEB /* Videos */,
 			);
 			path = resource;
@@ -124,21 +124,21 @@
 			path = Videos;
 			sourceTree = "<group>";
 		};
-		048AD609232431C900D3BAEB /* transcripts */ = {
-			isa = PBXGroup;
-			children = (
-				04719A8A2322A78E00E19E08 /* cnn_student_news_2016_05_24.swift */,
-				048AD60C2324372600D3BAEB /* WhatIsDebate.swift */,
-			);
-			path = transcripts;
-			sourceTree = "<group>";
-		};
 		04B4D6A123CA23BF00143675 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				04B4D6A223CA23DC00143675 /* Sub.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		04B4D6A423CA3E7E00143675 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				04719A8A2322A78E00E19E08 /* cnn_student_news_2016_05_24.swift */,
+				048AD60C2324372600D3BAEB /* WhatIsDebate.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		04BCEB54231EA8D3003202F6 /* VideoManager */ = {
